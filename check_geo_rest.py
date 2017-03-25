@@ -2,12 +2,12 @@ import googlemaps
 import redis
 
 def connection_redis():
-    host_redis = '127.0.0.1'
+    host_redis = 'localhost'
     connection = redis.StrictRedis(host=host_redis)
     return connection
 
 def connection_api_google_maps():
-    connection_gmaps = googlemaps.Client(key='AIzaSyCzZl5o6V0R0QtvqbrfMDeRTGR2nIsQrhE')
+    connection_gmaps = googlemaps.Client(key='key')
     return connection_gmaps
 
 def get_keys_redis(connect):
